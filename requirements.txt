@@ -1,0 +1,5 @@
+pyrogram
+redis
+langdetect
+gtts
+tgcrypto
