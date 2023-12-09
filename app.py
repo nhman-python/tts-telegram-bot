@@ -46,7 +46,7 @@ async def send_audio(_, message):
         if audio_path and os.path.isfile(audio_path):
             res = open(audio_path, 'rb')
             await app.send_chat_action(chat_id, action=enums.ChatAction.UPLOAD_DOCUMENT)
-            if await app.send_audio(chat_id, audio=res, file_name=f'{uuid.uuid4()}.mp3'):
+            if await app.send_audio(chat_id, audio=res, file_name=f'@python_tip_israel.mp3'):
                 res_time = time.time() - start
                 message_length = len(message.text)
                 await app.edit_message_text(chat_id, message_reply.id, utility.create_message(message_length, res_time))
